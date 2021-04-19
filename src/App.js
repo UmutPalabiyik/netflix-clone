@@ -1,4 +1,5 @@
 import "./App.scss";
+import Footer from "./components/Footer";
 import Row from "./components/Row";
 import request from "./request";
 
@@ -44,6 +45,7 @@ function App() {
         title="Documentaries"
         fetchUrl={request.fetchDocumentaries}
       />
+      <Footer />
     </div>
   );
 }
