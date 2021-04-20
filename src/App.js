@@ -1,11 +1,13 @@
 import "./App.scss";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import Row from "./components/Row";
 import request from "./request";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={request.fetchNetflixOriginals}
