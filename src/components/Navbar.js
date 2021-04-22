@@ -5,13 +5,14 @@ import { IoMdNotifications } from "react-icons/io";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  // We do this cuz when we scroll down we change navbar background to black
   const [scroll, setScroll] = useState("");
   useEffect(() => {
     document.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
-        setScroll("black-bg");
+        setScroll("black-bg"); // If window.scrollY position is bigger than 0.We add black-bg class to navbar
       } else {
-        setScroll("");
+        setScroll(""); // If window.scrollY position is equal 0 we remove black-bg class
       }
     });
   }, []);
