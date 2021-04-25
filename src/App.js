@@ -6,6 +6,16 @@ import Row from "./components/Row";
 import request from "./request";
 
 function App() {
+  const rows = [
+    { title: "Trending Now", url: request.fetchTrending },
+    { title: "Top Rated", url: request.fetchTopRated },
+    { title: "Actions Movies", url: request.fetchActionMovies },
+    { title: "Comedy Movies", url: request.fetchComedyMovies },
+    { title: "Horror Movies", url: request.fetchHorrorMovies },
+    { title: "Romance Movies", url: request.fetchRomanceMovies },
+    { title: "Documentaries", url: request.fetchDocumentaries },
+  ];
+
   return (
     <div className="App">
       <Navbar />
@@ -15,19 +25,11 @@ function App() {
         fetchUrl={request.fetchNetflixOriginals}
         isLarge
       />
-      <Row title="Trending Now" fetchUrl={request.fetchTrending} />
 
-      <Row title="Top Rated" fetchUrl={request.fetchTopRated} />
+      {rows.map((row) => {
+        return <Row title={row.title} fetchUrl={row.url} />;
+      })}
 
-      <Row title="Actions Movies" fetchUrl={request.fetchActionMovies} />
-
-      <Row title="Comedy Movies" fetchUrl={request.fetchComedyMovies} />
-
-      <Row title="Horror Movies" fetchUrl={request.fetchHorrorMovies} />
-
-      <Row title="Romance Movies" fetchUrl={request.fetchRomanceMovies} />
-
-      <Row title="Documentaries" fetchUrl={request.fetchDocumentaries} />
       <Footer />
     </div>
   );

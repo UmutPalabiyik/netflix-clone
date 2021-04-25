@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="primary-nav-list-wrapper">
         <div className="header-logo">
           <a href="/">
-            <img src="../../assets/netflix_logo.png" alt="img" />
+            <img src="../../assets/Netflix_logo.png" alt="img"/>
           </a>
         </div>
         <ul className="primary-nav-list">
