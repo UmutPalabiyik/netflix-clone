@@ -30,26 +30,29 @@ const Banner = (props) => {
         top: "0",
         left: "0",
         marginTop: "-30px",
+
       }}
     >
       <div className="banner-content">
-        <h1 className="banner-title">
-          {movie?.title || movie?.name || movie?.original_name}
-        </h1>
-        <h2 className="banner-description">{movie?.overview}</h2>
-        <div className="banner-buttons-wrapper">
-          <button className="left-button banner-buttons">
-            <AiFillCaretRight className="right-arrow-icon" size={"35"} />
-            <span className="play-button">Play</span>
-          </button>
-          <button className="right-button banner-buttons">
-            <AiOutlineInfoCircle
-              className="info-icon"
-              color="white"
-              size={"35"}
-            />
-            <span>More info</span>
-          </button>
+        <div className="banner-wrapper">
+          <h1 className="banner-title">
+            {movie?.title || movie?.name || movie?.original_name}
+          </h1>
+          <h2 className="banner-description">{movie?.overview}</h2>
+          <div className="banner-buttons-wrapper">
+            <button className="left-button banner-buttons">
+              <AiFillCaretRight className="right-arrow-icon" size={"35"} />
+              <span className="play-button">Play</span>
+            </button>
+            <button className="right-button banner-buttons">
+              <AiOutlineInfoCircle
+                className="info-icon"
+                color="white"
+                size={"35"}
+              />
+              <span className="info-button">More info</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -17,6 +17,7 @@ const Navbar = () => {
     });
   }, []);
 
+
   return (
     <div className={`main-header ${scroll}`}>
       <div className="primary-nav-list-wrapper">
@@ -25,7 +26,11 @@ const Navbar = () => {
             <img src="../../assets/Netflix_logo.png" alt="img"/>
           </a>
         </div>
+        <div>
+         
+        </div>
         <ul className="primary-nav-list">
+
           <li>
             <a href="/">Home</a>
           </li>
